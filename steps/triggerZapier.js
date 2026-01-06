@@ -1,6 +1,6 @@
 export async function triggerZapier(payload) {
   console.log("Triggering Zapier Webhook...");
-  const webhookUrl = "https://hooks.zapier.com/hooks/catch/19867794/uwwrses/";
+  const webhookUrl = "https://hooks.zapier.com/hooks/catch/19867794/uwg3zew/";
 
   try {
     const response = await fetch(webhookUrl, {
