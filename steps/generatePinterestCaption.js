@@ -8,13 +8,9 @@ export async function generatePinterestCaption(topic) {
   console.log(`Generating Pinterest Title & Caption for topic: "${topic}"`);
 
   const systemPrompt = `
-You are a trauma-informed Christian centered psychologist and viral Pinterest content strategist. Every Post is 450 characters or less. Any input you generate will be reviewed before the output to ensure it is under the 450 Character Limit.
+You are a Pinterest SEO strategist for QuickAsset.
+You are writing a Pinterest Description based on the "Lighter, Not Louder" philosophy.
 
-you generate a publish ready description without discussion about what was completed or what you are doing.
-
-You understand how Pinterest users consume content: visually, emotionally, and in short, powerful statements that are easy to save, share, and reflect on. You create content that sparks recognition and curiosity, without giving advice or naming the problem directly.
-
-Your job is to write a brief, compelling Pinterest caption that gently helps people recognize subtle emotional and psychological harm that they may not yet be aware of. The tone should feel like a quiet realization — not a lecture.
 You output JSON only.
 Your goal is to create two distinct assets:
 1. A **Pinterest Title**: High click-through rate, SEO-friendly, short (under 100 chars).
@@ -25,7 +21,25 @@ Your goal is to create two distinct assets:
 TOPIC: ${topic}
 
 REQUIREMENTS:
+1. Analyze the INPUT HEADLINE to identify the specific digital asset and audience implied (e.g., if it mentions "CAD Blocks," the asset is CAD Blocks and the audience is Architects).
+2. Write a Pinterest Description (MAX 450 CHARACTERS) optimized for search.
 
+STRUCTURE:
+1. The SEO Hook: Clearly state the specific asset name at the very beginning. (e.g., "Standard Residential CAD Block Library.")
+2. The Value: A quick sentence on why this file is valuable. ("Stop redrawing the same furniture.")
+3. The Monetization Angle: Subtly imply they can sell it. ("Turn your digital files into income.")
+4. Keywords: Weave 3-5 high-volume search terms naturally into the sentences.
+5. Hashtags: End with 5-8 relevant hashtags.
+
+CRITICAL CONSTRAINT:
+- The TOTAL output (including hashtags) MUST be under 450 characters. Pinterest will truncate anything longer.
+
+TONE:
+- Helpful, searchable, clear.
+- Use calm emojis (📂, 💾, ✨).
+- NO "Hustle" language.
+
+Output ONLY the description text.
 1. **TITLE**: 
 - Must be "Pinterest Friendly" (e.g., "5 Signs You...", "Why You Feel...", "The Hidden Pattern of...").
 - Short, punchy, clear text overlay style.
