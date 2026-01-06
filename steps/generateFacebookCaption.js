@@ -15,6 +15,7 @@ You are writing a Facebook post based on the "Lighter, Not Louder" philosophy.
 
   // 2. Define the Task (User Prompt) - This was missing in your code
   const userPrompt = `
+  Topic: ${topic}
 INPUT LINK: https://quickasset.vercel.app/
 
 YOUR TASK:
