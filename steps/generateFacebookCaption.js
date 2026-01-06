@@ -9,40 +9,43 @@ export async function generateFacebookCaption(topic) {
 
   // 1. Define the Persona
   const systemPrompt = `
-You are a trauma-informed Christian centered psychologist and a viral Facebook content strategist who specializes in creating high-engagement educational posts that spark conversation and self-recognition. You understand how to write for Facebook’s audience behavior: longer-form storytelling, emotional resonance, community connection, and meaningful conversation. You use emojis and formatting to create visual pacing and draw attention, but never excessively.
-
-Your job is to write a highly engaging Facebook post that helps people gently recognize subtle patterns of emotional or psychological harm they may not yet be aware of.
-
-The audience is people who may be experiencing something harmful but have not named it yet. They are intelligent, intuitive, and self-aware, but have been slowly conditioned to doubt themselves. The tone must be compassionate, reflective, and curiosity-driven — never dramatic, accusatory, or preaching.`;
+You are a content strategist for QuickAsset.
+You are writing a Facebook post based on the "Lighter, Not Louder" philosophy.
+`;
 
   // 2. Define the Task (User Prompt) - This was missing in your code
   const userPrompt = `
-Write a Facebook post based on this TOPIC: ${topic}
+INPUT LINK: https://quickasset.vercel.app/
 
-Formatting + performance requirements for Facebook:
-- MUST begin with a scroll-stopping hook on its own line (short, emotional, curiosity-driven)
-- Use whitespace strategically for pacing (1–3 sentences per paragraph)
-- Use emojis for emphasis and emotional cues (not excessively)
-- Build gradually from relatable everyday moments → internal emotional effects → realization
-- Assume the reader is NOT aware something is wrong
-- Use sensory and emotional language (e.g., shrinking, hesitation, second-guessing, confusion, walking carefully)
-- Do NOT name “abuse” until late in the post; use gentle language like “sometimes this becomes something harmful”
-- Avoid clinical jargon or advice (no steps, no instructions)
-- Do NOT use bullet points
-- End with an open-ended reflective question that encourages comments and community sharing
+YOUR TASK:
+1. Analyze the INPUT HEADLINE to identify the specific audience or asset implied (e.g., if it mentions "Lesson Plans," the audience is Teachers).
+2. Write a post (100-200 words) that expands on that specific angle.
 
-Structure:
-1) Hook tied to the topic
-2) Small real-life examples illustrating the pattern
-3) Internal psychological/emotional shift
-4) Gradual realization arc
-5) Gentle suggestion it may indicate something harmful
-6) Reflective engagement question
+DIFFERENCES FROM INSTAGRAM:
+- Since this is Facebook, you can be slightly more conversational/story-driven.
+- Place the URL directly in the text at the end.
 
-Output:
-A complete Facebook post formatted with emojis and spacing, optimized for shares, saves, and comments.
-Include 8–12 relevant hashtags placed on a new line at the bottom.
-Do NOT explain the task. Output only the final post.
+STRUCTURE:
+1. The Hook: Open with a calm observation about the specific asset. (e.g., "The most valuable file on an Architect's hard drive isn't usually the final PDF. It's the library they built to get there.")
+2. The Validation: Acknowledge that they are sitting on a "digital tool" they use every day to save time. It wasn't built for "content"; it was built for survival.
+3. The Solution: Remind them that other professionals are desperate for that exact tool.
+4. The Permission: Tell them they can sell it right now without a website or a "launch strategy."
+5. The Link: "Turn that file into a product here: [Insert Link]"
+
+TONE & STYLE:
+- "Lighter, not louder."
+- No hype. No "Hustle." No "Grind."
+- Use standard sentence case.
+- Use calm emojis (📂, ☕️, ✨, 💡). Avoid "Hustle" emojis (🔥, 🚀, 💀, 😤).
+
+HASHTAGS:
+- Include ONLY 3-4 highly relevant hashtags at the very bottom. (Do not spam tags like on Instagram).
+
+Output the post text with the link included.
+
+OUTPUT FORMAT:
+Write only the Facebook post, fully formatted with breaks, pacing, and emojis.
+Nothing else.
   `;
 
   try {
