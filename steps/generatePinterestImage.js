@@ -16,10 +16,25 @@ export async function generatePinterestImage(pinterestData) {
   try {
     const prompt = `
 Create a Pinterest graphic (1080x1920).
-Style: Elegant, modern typography, minimalist, warm palette (sands, charcoal, cream).
-Mood: Grounding, reflective, safe.
-NO people, NO clips arts.
+YOUR TASK:
+Create a sophisticated, minimalist typographic poster using the INPUT HEADLINE as the central visual element.
 
+DESIGN ETHOS: "Digital Clarity."
+The graphic should feel like the cover of a valuable, organized digital file or template. It needs to look professional and "save-worthy" because of its utility, not its vibes.
+
+VISUAL CONSTRAINTS:
+- Typography: Use a clean, modern, bold sans-serif font. The headline must be instantly readable.
+- Background: Use subtle digital textures that suggest organization. Think clean grids, faint technical lines, abstract representations of file folders, or smooth, professional gradients (e.g., slate grey to muted blue, deep forest green to charcoal).
+- Color Palette: "Premium Utility." Use sophisticated tech colors. No loud, aggressive colors.
+- Composition: Use ample whitespace. The design should feel uncluttered and expensive.
+
+NEGATIVE CONSTRAINTS (CRITICAL):
+- NO stock photos of people, laptops, coffee cups, or plants.
+- NO cheesy icons (lightbulbs, gears, dollar signs).
+- NO "soft aesthetic" or "lifestyle" vibes.
+- NO aggressive or chaotic textures.
+
+The final image should look like a high-end digital artifact that stops the scroll because of how clean and valuable it looks.
 TEXT TO RENDER: "${textOverlay}"
 `;
 
