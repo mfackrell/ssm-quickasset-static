@@ -8,40 +8,39 @@ export async function generateInstagramCaption(topic) {
   console.log(`Generating Instagram caption for topic: "${topic}"`);
 
   const systemPrompt = `
-You are a trauma-informed Christian psychologist and a viral Instagram content strategist. You understand how to craft viral Instagram Posts and format them accordingly. You use images and emoji when necessary to emphasise you points, you grab interest and then educate your audience. Your job is to write highly engaging, emotionally resonant Instagram captions that help people gently recognize subtle patterns of mental, emotional or psychological harm that they may not yet be aware of, resulting from abuse that is primarily mental, spiritual and emotional in nature. You understand how faith can be used to manipulate people and in those instances you fight back the abusers use of scripture with a truly Godly use of scripture. 
-
-The audience is people who may be experiencing something harmful but have not named it yet. They are intelligent, intuitive, and self-aware, but they have been slowly conditioned to doubt themselves. The tone must be compassionate, reflective, and curiosity-driven—not dramatic or accusatory.`;
+You are a content strategist for QuickAsset.
+You are writing a caption for an Instagram Static Post based on the "Lighter, Not Louder" philosophy.
+`;
 
   const userPrompt = `
 The audience is intelligent and intuitive but conditioned to doubt themselves. They are scrolling quickly. You must catch them immediately.
 
 TOPIC: ${topic}
 
-Formatting + performance requirements:
-- MUST start with a scroll-stopping hook in 1 short line.
-- Use whitespace between lines (1–2 sentences max per paragraph).
-- Use emojis strategically to emphasize emotion or pacing (not excessively).
-- Build slowly from relatable everyday experience → internal emotional shifts → recognition of a pattern.
-- Assume the reader does NOT recognize anything is wrong.
-- Use sensory and emotional cues (e.g., shrinking, hesitation, confusion, walking on eggshells).
-- Do NOT name “abuse” directly until close to the end. Use gentle language like “sometimes this is more than…” or “it can become something harmful.”
-- Avoid clinical jargon.
-- Avoid solutions or steps.
-- End with a single open-ended reflective question that encourages comments.
+YOUR TASK:
+1. Analyze the INPUT HEADLINE to identify the specific audience or asset implied (e.g., if the headline mentions "CAD blocks," the audience is Architects).
+2. Write a caption (100-150 words) that expands on that specific angle.
 
+CAPTION STRUCTURE:
+1. The Validation: Acknowledge that they created this specific file for themselves just to survive their own workload. It wasn't "content"; it was a tool.
+2. The Shift: Point out that hundreds of people in their industry are struggling with the same problem, and they would happily pay $10-$20 for this solution.
+3. The Relief: Remind them they don't need a website, a logo, or a "brand" to sell it. They just need a checkout link.
+4. Soft CTA: "Link in bio to turn the file into a product in 60 seconds."
 
-Structure:
-1) Hook tied to the topic (short, emotional, relatable, curiosity-triggering)
-2) Real-life micro-moments that illustrate the topic
-3) Internal emotional shifts
-4) Slow realization arc
-5) Gentle introduction that this may be harmful
-6) Reflective engagement question
+HASHTAG STRATEGY:
+- Include 5 tags specific to the audience (e.g., #architecture, #revit, #designlife).
+- Include 5 tags specific to the asset type (e.g., #cadblocks, #templates, #digitalassets).
+- Include 5 tags about "calm business" (e.g., #passiveincome, #sidehustleideas, #quickasset, #sellfiles).
+- Do NOT use spammy tags like #follow4follow or #like4like.
 
-Output:
-A complete Instagram caption (with emojis and spacing) ready to publish. 
-- Generate publish ready contennt without explain of task or description of what was done.
-- Generate 10-15 hashtags and place at the end of the caption.
+TONE & STYLE:
+- "Lighter, not louder." Zero pressure.
+- Calm, observational voice.
+- Short, readable paragraphs.
+- NO "Hustle Bro" emojis (No 🚀, 😤, 💀, 💰). Use calm emojis if necessary (📂, ✨, ☕️).
+- NO hype language ("Explode your income," "Crush it," "Empire").
+
+Output ONLY the caption text.
 
 GENERATE NOW.
 `;
