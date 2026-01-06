@@ -17,11 +17,25 @@ export async function generateInstagramImage(caption) {
   try {
     const prompt = `
 Create a vertical Instagram graphic (1080x1350).
-Style: Minimalist, premium typography, soft strength. 
-Colors: Deep charcoal, off-white, soft gold.
-NO people, NO cliches.
-Context: Recognized emotional harm.
+YOUR TASK:
+Create a sophisticated, minimalist typographic poster using the INPUT HEADLINE as the central visual element.
 
+DESIGN ETHOS: "Clarity is power."
+The aesthetic should feel like a clean, organized digital workspace. It should breathe relief and simplicity.
+
+VISUAL CONSTRAINTS:
+- Typography: Use a clean, modern, bold sans-serif font. The headline must be instantly readable. Typography is the hero.
+- Background: Use subtle digital textures. Think clean grids, faint blueprint lines, abstract representations of file folders, or smooth, calming gradients (e.g., deep charcoal to muted teal, off-white to light grey).
+- Color Palette: "Premium Utility." Use sophisticated tech colors—deep blues, forest greens, slate greys, or muted metallics. No neon, no aggressive reds, no chaotic colors.
+- Composition: Use ample whitespace to create a feeling of calm organization.
+
+NEGATIVE CONSTRAINTS (CRITICAL):
+- NO stock photos of people, computers, or desks.
+- NO cheesy icons (lightbulbs, gears, dollar signs).
+- NO "grunge," "distressed," or chaotic textures.
+- NO aggressive or shouting aesthetics.
+
+The final image should look like a high-end digital artifact that stops the scroll because of how clean it is, not how loud it is.
 TEXT TO RENDER: "${headline}"
 `;
 
