@@ -21,11 +21,24 @@ export async function generateFacebookImage(caption) {
   try {
     const prompt = `
 Create a powerful, share-worthy Facebook graphic (1200x1350).
-Purpose: Spark recognition of subtle emotional harm.
-Design: Minimalist, premium typography, clean layout, warm muted colors (slate, navy, sand).
-NO photos of people, NO cliches, NO chaotic imagery.
-Emotional Tone: Calm strength, clarity.
+YOUR TASK:
+Create a sophisticated, minimalist typographic poster using the INPUT HEADLINE as the central visual element.
 
+DESIGN ETHOS: "Clarity over emotion."
+The aesthetic should feel like a clean, organized digital workspace or a sophisticated blueprint. It should communicate professional utility.
+
+VISUAL CONSTRAINTS:
+- Typography: Use a clean, modern, bold sans-serif font. The headline must be the dominant visual feature.
+- Background: Use subtle digital textures that suggest organization. Think clean grids, faint technical lines, abstract representations of file structures, or smooth, professional gradients (e.g., slate grey to muted blue, deep forest green to charcoal).
+- Color Palette: "Premium Utility." Use sophisticated tech colors. No loud, aggressive, or "hustle" colors (like bright reds or neon yellows).
+- Composition: Use ample whitespace. The design should feel uncluttered and expensive.
+
+NEGATIVE CONSTRAINTS (CRITICAL):
+- NO stock photos of people, laptops, coffee cups, or desks.
+- NO cheesy emotional imagery or "inspirational" vibes.
+- NO aggressive or chaotic aesthetics.
+
+The final image should stop the scroll because it looks like a highly valuable piece of professional software, not a motivational quote.
 TEXT TO RENDER ON IMAGE: "${headline}"
 `;
 
