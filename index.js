@@ -27,7 +27,8 @@ app.post("/run", async (req, res) => {
 
     // --- SCHEDULING LOGIC ---
     if (!force) {
-      const decision = await shouldRunToday();
+      const currentHour = new Date().getUTCHours() - 6; // Adjust -6 for CST
+      const decision = await shouldRunToday(currentHour);
 
       if (!decision.shouldRun) {
         console.log('Skipping run:', decision.reason);
